@@ -10,14 +10,14 @@
 
 ## Step 2 - Index.html
 - Remember the basic index.html layout:
-<code>
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>User Profiles</title>
-    </head>
-    <body>
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profiles</title>
+</head>
+<body>
 
-    </body>
-    </html>
-</code>
+</body>
+</html>
+```
