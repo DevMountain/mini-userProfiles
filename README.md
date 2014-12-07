@@ -10,6 +10,7 @@
 
 ## Step 2 - Index.html
 - Remember the basic index.html layout:
+<code>
     <!DOCTYPE html>
     <html>
     <head>
@@ -19,3 +20,4 @@
 
     </body>
     </html>
+</code>
