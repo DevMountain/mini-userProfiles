@@ -9,5 +9,4 @@
 - Create a service.js file
 
 ## Step 2 - Index.html
-`` html
-  <div></div>
+    <div></div>
