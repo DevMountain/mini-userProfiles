@@ -1,6 +1,9 @@
 # User Profiles
 ### Understanding Services
 
+## Objective
+### To better understand the relationship between Angular controllers and services.
+
 ## Step 1 - Basic setup
 - Create and setup an index.html page
 - Insert the AngularJS CDN: http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js
@@ -116,6 +119,8 @@ So now our service should look like this:
 
 ``` javascript
 var app = angular.module('userProfiles');
+
+app.service('mainService', function() {
   var data = 
   [
     {
@@ -137,12 +142,112 @@ var app = angular.module('userProfiles');
         "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"
     }
   ]
-
-
-
-app.service('mainService', function() {
-
 });
 ```
+
+## Step 4 - Our Service
+Our Service will do most of the apps heavy lifting. We want to keep our controllers as slim as possible. To do that we will need to create a function that delivers our data to our controller.
+- Write a function called "getUsers" that will return all of our user data to the controller
+  - Remember: functions made in a service can be tied to the service via the "this" keyword 
+
+``` javascript
+var app = angular.module('userProfiles');
+
+app.service('mainService', function() {
+  var data = 
+  [
+    {
+        "id": 1,
+        "first_name": "george",
+        "last_name": "bluth",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
+    },
+    {
+        "id": 2,
+        "first_name": "lucille",
+        "last_name": "bluth",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
+    },
+    {
+        "id": 3,
+        "first_name": "oscar",
+        "last_name": "bluth",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"
+    }
+  ]
+  
+  this.getUsers = function() {
+    return data;
+  }
+  
+});
+```
+This new function allows us to access the variable "data" outside of the service file.
+
+## Step 5 - Our Controller
+The next thing we need to do is to create a function in our controller that gathers the data and prepares it to be sent to the view.
+
+- In the controller.js file, create a function on the $scope object named "getUsers"
+
+``` javascript
+var app = angular.module('userProfiles');
+
+app.controller('MainController', function($scope) {
+  $scope.getUsers = function() {
+  }
+});
+```
+
+- Then, inject the mainService in the controllers callback function
+
+``` javascript
+var app = angular.module('userProfiles');
+
+app.controller('MainController', function($scope, mainService) {
+  $scope.getUsers = function() {
+  }
+});
+```
+
+- Now, within the new getUsers function, we can access the mainService's getUsers function
+  - Let's set a variable called $scope.users equal to the result of the mainService's function
+  - Also, we should call our $scope.getUsers function after we have declared it or it won't run
+
+``` javascript
+var app = angular.module('userProfiles');
+
+app.controller('MainController', function($scope, mainService) {
+  $scope.getUsers = function() {
+    $scope.users = mainService.getUsers();
+  }
+  
+  $scope.getUsers();
+});
+```
+Now we have an object named "$scope.users" which represents our data. Because it is on the $scope object we can access it in our view by placing this within the body of our index.html:
+
+``` html
+{{users}}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
