@@ -16,6 +16,6 @@
       <title>User Profiles</title>
     </head>
     <body>
-    
+
     </body>
     </html>
