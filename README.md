@@ -9,4 +9,13 @@
 - Create a service.js file
 
 ## Step 2 - Index.html
-    <div></div>
+- Remember the basic index.html layout:
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>User Profiles</title>
+    </head>
+    <body>
+    
+    </body>
+    </html>
