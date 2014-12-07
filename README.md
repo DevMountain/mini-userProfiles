@@ -230,7 +230,18 @@ Now we have an object named "$scope.users" which represents our data. Because it
 {{users}}
 ```
 
+# Step 6 - The View
+Now we have our data in our view, but it's a little ugly. Let's do some simple configuration to make it a bit more userfriendly. Typically when you have an array of data, it's a good idea to use ng-repeat to organize it.
 
+``` html
+<div ng-repeat="user in users">
+  <h1>{{user.first_name}} {{user.last_name}}</h1>
+  <img src="{{user.avatar}}">
+  <hr>
+</div>
+```
+
+Now we should have some awesome user profiles! 
 
 
 
