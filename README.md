@@ -10,7 +10,7 @@
 
 ## Step 2 - Index.html
 - Remember the basic index.html layout:
-```
+``` html
 <!DOCTYPE html>
 <html>
 <head>
