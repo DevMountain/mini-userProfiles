@@ -11,7 +11,7 @@
 - Create a controller.js file
 - Create a service.js file
 
-## Step 2 - Index.html
+## Step 2 - index.html
 - Remember the basic index.html layout
 ``` html
 <!DOCTYPE html>
