@@ -28,20 +28,6 @@
   - Remember to load JavaScript files at the bottom of the body
 - Include the app.js, controller.js, and service.js file, as well as the CDN
   - Remember that the CDN must go on top of your other files or your app will throw an error 
-``` html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>User Profiles</title>
-</head>
-<body>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
-<script src="app.js"></script>
-<script src="controller.js"></script>
-<script src="service.js"></script>
-</body>
-</html>
-```
 - Next we will add some things that tell our index that we are working with AngularJS
   - ng-app loads our primary angular module. Let's name the module 'userProfiles'
   - ng-controller loads our controller for the view. Let's name the controller 'MainController'
@@ -53,10 +39,10 @@
   <title>User Profiles</title>
 </head>
 <body ng-controller="MainController">
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js">
-<script src="app.js">
-<script src="controller.js">
-<script src="service.js">
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<script src="service.js"></script>
 </body>
 </html>
 ```
