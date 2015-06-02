@@ -35,10 +35,10 @@
   <title>User Profiles</title>
 </head>
 <body>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js">
-<script src="app.js">
-<script src="controller.js">
-<script src="service.js">
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<script src="service.js"></script>
 </body>
 </html>
 ```
