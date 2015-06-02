@@ -13,17 +13,6 @@
 
 ## Step 2 - index.html
 - Remember the basic index.html layout
-``` html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>User Profiles</title>
-</head>
-<body>
-
-</body>
-</html>
-```
 - Then link in our other files
   - Remember to load JavaScript files at the bottom of the body
 - Include the app.js, controller.js, and service.js file, as well as the CDN
