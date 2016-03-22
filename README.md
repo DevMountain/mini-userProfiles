@@ -104,3 +104,7 @@ Now we have an object named "$scope.users" which represents our data. Because it
 Now we have our data in our view, but it's a little ugly. Let's do some simple configuration to make it a bit more userfriendly. Typically when you have an array of data, it's a good idea to use ng-repeat to organize it.
 
 Now we should have some awesome user profiles! 
+
+## Copyright
+
+© DevMountain LLC, 2016. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
