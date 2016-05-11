@@ -54,9 +54,7 @@
 So now our service should look like this:
 
 ``` javascript
-var app = angular.module('userProfiles');
-
-app.service('mainService', function() {
+angular.module('userProfiles').service('mainService', function() {
   var data = 
   [
     {
