@@ -1,4 +1,4 @@
-angular.module('userProfiles').controller('MainController', function($scope, MainService){
+angular.module('userProfiles').controller('MainController', function($scope){
     
     $scope.thisAppIsBroken = "This angular app is working";
    
