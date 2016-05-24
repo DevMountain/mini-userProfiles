@@ -15,7 +15,7 @@ You have an app, a controller, an index file, and a stylesheet.
 - If Angular is broken you probably didn't add it to the index.html file
 - We will also want to load some data into our service. Copy the following data into the service:
 ``` json
-{
+[{
     "id": 1,
     "first_name": "george",
     "last_name": "bluth",
@@ -32,7 +32,7 @@ You have an app, a controller, an index file, and a stylesheet.
     "first_name": "oscar",
     "last_name": "bluth",
     "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"
-}
+}]
 ```
 
 So now our service should look like this:
