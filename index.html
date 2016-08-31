@@ -5,12 +5,19 @@
     <title>mini-userProfiles</title>
     <link rel="stylesheet" href="styles.css"></link>
 </head>
-<body ng-controller="MainController">
+<body ng-controller="mainController">
     
-    {{thisAppIsBroken}}
+    <div ng-repeat="user in users">
+        <h3>{{user.first_name}}</h3>
+        <h5>{{user.last_name}}</h5>
+        <img src="{{user.avatar}}">
+
+    </div>
+        
     
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
      <script src="app.js"></script>
-     <script src="controller.js"></script>
+     <script src="mainController.js"></script>
+     <script src="mainService.js"></script>
 </body>
 </html>
