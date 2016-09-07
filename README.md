@@ -5,7 +5,8 @@
 ### To better understand the relationship between Angular controllers and services.
 
 ## Step 1 - Review setup
-You have some starting files to work with.  Spend a couple minutes looking through them and understanding what's going on.
+You have some starting files to work with.  Spend a couple minutes looking through them and 
+understanding what's going on.
 You have an app, a controller, an index file, and a stylesheet.
 
 ## Step 2 - Our service
@@ -64,12 +65,14 @@ angular.module('userProfiles').service('mainService', function() {
 ```
 
 ## Step 3 - Our Service
-Our Service will do most of the apps heavy lifting. We want to keep our controllers as slim as possible. To do that we will need to create a function that delivers our data to our controller.
+Our Service will do most of the apps heavy lifting. We want to keep our controllers as slim as possible. 
+To do that we will need to create a function that delivers our data to our controller.
 - Write a function called "getUsers" that will return all of our user data to the controller
   - Remember: functions made in a service can be tied to the service via the "this" keyword 
 
 ## Step 4 - Our Controller
-The next thing we need to do is to create a function in our controller that gathers the data and prepares it to be sent to the view.
+The next thing we need to do is to create a function in our controller that gathers the data and prepares 
+it to be sent to the view.
 
 - In the controller.js file, create a function on the $scope object named "getUsers"
 - Then, inject the mainService in the controller
@@ -77,25 +80,32 @@ The next thing we need to do is to create a function in our controller that gath
   - Let's set a variable called $scope.users equal to the result of the mainService's function
   - Also, we should invoke our $scope.getUsers function after we have declared it or it won't run
 
-Now we have an object named "$scope.users" which represents our data. Because it is on the $scope object we can access it in our view by placing this within the body of our index.html, using `{{}}` binding.
+Now we have an object named "$scope.users" which represents our data. Because it is on the $scope object 
+we can access it in our view by placing this within the body of our index.html, using `{{}}` binding.
 
 
 # Step 5 - The View
-Now we have our data in our view, but it's a little ugly. Let's do some simple configuration to make it a bit more userfriendly. Typically when you have an array of data, it's a good idea to use ng-repeat to organize it.
+Now we have our data in our view, but it's a little ugly. Let's do some simple configuration to make 
+it a bit more userfriendly. Typically when you have an array of data, it's a good idea to use ng-repeat 
+to organize it.
 
 Now we should have some awesome user profiles! 
 
 # Step 6 - Returning to the service
 We want to be able to 'favorite' each user and have that saved and reflected.
 
-* In the service, make a new function called `toggleFavorite`. It takes in an index number and uses it to modify the data at that index to change an 'isFavorite' property back and forth between true and false.
+* In the service, make a new function called `toggleFavorite`. It takes in an index number and uses it to 
+modify the data at that index to change an 'isFavorite' property back and forth between true and false.
 * In the controller, Add that function to your controllers $scope  (Don't invoke it, just assign it).
-* In the html, Add a button inside the ng-repeat to each user that invokes the toggleFunction and passes in the user id
+* In the html, Add a button inside the ng-repeat to each user that invokes the toggleFunction and passes in 
+the user id
 `ng-click="toggleFavorite(user.id)`
 Note: This only works because the user.id's match their index in the array of profiles.
 
-* Last, we're going to use ng-class to style the html conditionally.  The format looks like this `ng-class="{class-name: javascriptExpression }`
-Our code is going to look like this : `ng-class="{favorite: user.isFavorite}"`.  We're telling angular that when user.isFavorite is true to apply the .favorite class.  And when it's false to remove it.
+* Last, we're going to use ng-class to style the html conditionally.  The format looks like this 
+`ng-class="{class-name: javascriptExpression }`
+Our code is going to look like this : `ng-class="{favorite: user.isFavorite}"`.  We're telling angular 
+that when user.isFavorite is true to apply the .favorite class.  And when it's false to remove it.
 
 # Final Code
 
