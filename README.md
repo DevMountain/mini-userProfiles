@@ -104,19 +104,19 @@ Our code is going to look like this : `ng-class="{favorite: user.isFavorite}"`. 
 angular.module('userProfiles').controller('MainController', function($scope, mainService){
     
     $scope.getUsers = function(){
-        $scope.users = MainService.getUsers();
+        $scope.users = mainService.getUsers();
     }
     
     $scope.getUsers();
     
-    $scope.toggleFavorite = MainService.toggleFavorite;
+    $scope.toggleFavorite = mainService.toggleFavorite;
 })
 ```
 
 ```javascript
 //service
 
-angular.module('userProfiles').service('MainService', function(){
+angular.module('userProfiles').service('mainService', function(){
     var data =  [{
     "id": 0,
     "first_name": "george",
